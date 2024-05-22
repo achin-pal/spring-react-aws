@@ -47,4 +47,8 @@ public class ServiceChannel {
         }
         return false;
     }
+
+    public boolean deleteChallange(Long id) {
+          return allChallanges.removeIf(challange->challange.getId().equals(id));
+    }
 }
