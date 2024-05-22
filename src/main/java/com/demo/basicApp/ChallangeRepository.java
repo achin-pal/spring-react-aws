@@ -2,5 +2,8 @@ package com.demo.basicApp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ChallangeRepository extends JpaRepository {
+import java.util.Optional;
+
+public interface ChallangeRepository extends JpaRepository<Challanges,Long> {
+    Optional<Challanges> findByMonthIgnoreCase(String month);
 }
